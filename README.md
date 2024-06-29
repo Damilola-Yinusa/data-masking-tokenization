@@ -1,50 +1,50 @@
 ```markdown
 # Data Masking and Tokenization
 
-## Overview
+# Overview
 
 This project provides a robust solution for masking and tokenizing sensitive data in datasets using Python. The script utilizes the `pandas` library for data manipulation and the `cryptography` library for secure tokenization. The main goal is to protect sensitive information in datasets before storing them in cloud databases or sharing them across different platforms.
 
-## Features
+# Features
 
-- **Dynamic Column Selection**: Users can specify which columns contain sensitive data.
-- **Data Masking**: Replace sensitive data with masked values.
-- **Tokenization**: Encrypt and replace sensitive data with tokens.
-- **Secure Key Storage**: Encryption keys are securely stored and managed.
-- **Pattern Matching**: Identify and validate sensitive data patterns before processing.
-- **Environment Variable Support**: Manage key paths using environment variables.
-- **Logging**: Detailed logging to track script execution and issues.
+- Dynamic Column Selection: Users can specify which columns contain sensitive data.
+- Data Masking: Replace sensitive data with masked values.
+- Tokenization: Encrypt and replace sensitive data with tokens.
+- Secure Key Storage: Encryption keys are securely stored and managed.
+- Pattern Matching: Identify and validate sensitive data patterns before processing.
+- Environment Variable Support: Manage key paths using environment variables.
+- Logging: Detailed logging to track script execution and issues.
 
-## Prerequisites
+# Prerequisites
 
 - Python 3.6 or higher
 - `pandas` library
 - `cryptography` library
 - `python-dotenv` library
 
-## Installation
+# Installation
 
-1. **Clone the repository**:
+1. Clone the repository:
 
     ```bash
     git clone https://github.com/Damilola-Yinusa/data-masking-tokenization.git
     cd data-masking-tokenization
     ```
 
-2. **Create a virtual environment** (optional but recommended):
+2. Create a virtual environment (optional but recommended):
 
     ```bash
     python -m venv venv
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
 
-3. **Install the required packages**:
+3. Install the required packages:
 
     ```bash
     pip install pandas cryptography python-dotenv
     ```
 
-4. **Set up the environment variables**:
+4. Set up the environment variables:
 
     Create a `.env` file in the root directory of the project and add the following line (optional):
 
@@ -52,11 +52,11 @@ This project provides a robust solution for masking and tokenizing sensitive dat
     KEY_PATH=path/to/secret.key
     ```
 
-## Usage
+# Usage
 
-1. **Prepare your input CSV file**: Ensure you have a CSV file with the data you want to mask and tokenize.
+1. Prepare your input CSV file: Ensure you have a CSV file with the data you want to mask and tokenize.
 
-2. **Run the script**:
+2. Run the script:
 
     ```bash
     python enhanced_data_masking_tokenization.py input_data.csv output_data.csv email phone ssn --key_path=my_secret.key
@@ -64,7 +64,7 @@ This project provides a robust solution for masking and tokenizing sensitive dat
 
     Replace `input_data.csv` with the path to your input file, `output_data.csv` with the desired output file path, and `email phone ssn` with the columns you want to mask and tokenize. The `--key_path` argument is optional and can be omitted if you use the `.env` file.
 
-## Example
+# Example
 
 Given a CSV file `sample_data.csv` with the following content:
 
@@ -83,12 +83,12 @@ python enhanced_data_masking_tokenization.py sample_data.csv output_data.csv ema
 
 Will generate `output_data.csv` with masked and tokenized values for the specified columns.
 
-## Security
+# Security
 
 - Ensure the encryption key (`secret.key`) is stored securely and not exposed in your source code or public repositories.
 - Use environment variables to manage sensitive paths and configurations.
 
-## Contributing
+# Contributing
 
 I welcome contributions to enhance the functionality and security of this project. Please open an issue or submit a pull request.
 
